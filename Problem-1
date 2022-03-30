@@ -1,0 +1,10 @@
+Da,Db = map(int,input().split())
+Ta,Tb = map(int,input().split())
+for _ in range(1, ((Ta * 60) + Tb)+1, 1):
+    Db += 1
+    if Db > 59:
+        Db = 0
+        Da += 1
+        if Da > 23:
+            Da = 0
+print(f"{Da:02d}", f"{Db:02d}")
